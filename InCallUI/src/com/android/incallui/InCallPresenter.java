@@ -1875,16 +1875,8 @@ public class InCallPresenter implements CallList.Listener,
      * @param orientation {@link ActivityInfo#screenOrientation} Actual orientation value to set
      * @return returns whether the new orientation mode was set successfully or not.
      */
-    public boolean setInCallAllowsOrientationChange(int orientation) {
-        if (mInCallActivity == null) {
-            Log.e(this, "InCallActivity is null. Can't set requested orientation.");
-            return false;
-        }
-
-        mInCallActivity.setRequestedOrientation(orientation);
-        mInCallActivity.enableInCallOrientationEventListener(
-                orientation == InCallOrientationEventListener.FULL_SENSOR_SCREEN_ORIENTATION);
-        return true;
+    public boolean setInCallAllowsOrientationChange(int orientation) {        
+        return false;
     }
 
     /* returns TRUE if screen is turned ON else false */
